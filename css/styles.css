@@ -3,5 +3,21 @@
   box-shadow:10px 5px 5px teal;
 }
 body {
-font-family: "Open Sans", sans-serif;
+  font-family: 'Sansita Swashed', cursive;
+}
+h1 {
+  font-size: 40px;
+}
+#newport-image {
+  height: 350px;
+}
+h1,h2 {
+  font-family: 'Sansita Swashed', cursive;
+  text-align: center;
+}
+div p {
+  letter-spacing: 1px;
+}
+.btn {
+  align-items: center;
 }
