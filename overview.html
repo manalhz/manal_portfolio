@@ -16,10 +16,6 @@
 </head>
 
 <body>
-  <header class>
-
-  </header>
-
   <nav class="navbar navbar-expand-md navbar-light bg-light">
     <div class="container">
       <a class="navbar-brand" href="#">
@@ -32,10 +28,10 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="overview.html">Overview</a>
+            <a class="nav-link" href="#">Overview</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="gallery.html">Gallery</a>
@@ -57,32 +53,57 @@
     </div>
   </nav>
 
+  <div class="col">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="overview.html">Overview</a></li>
+    </ol>
+  </div>
 
-  <div class="card bg-dark text-white">
-    <img src="img/newport-beach.jpg" class="img-fluid" id="newport-image" alt="Newport Beach">
-    <div class="card-img-overlay">
-      <h1 class="card-title">Welcome to OC</h1>
-      <div class="container">
-        <div class="row row-content">
-          <div class="col-12 text-center">
-            <a class="btn btn-primary align-self-center" href="#" role="button">Check Availability</a>
+  <div class="container">
+    <h2>Amenities</h2>
+    <div class="row row-content">
+      <div class="card-group">
+        <div class="card border-info mb-3">
+          <img class="card-img-top" src="img/amenities-imgs/fitness-center-1.jpeg" alt="Fitness Center">
+          <div class="card-body">
+            <h3 class="card-title">Fitness Center</h5>
+              <p class="card-text">Enjoy a workout in a fully-equipped fitness center, with a view of the pool.</p>
+          </div>
+        </div>
+
+        <div class="card border-info mb-3">
+          <img class="card-img-top" src="img/amenities-imgs/pool-1.jpeg" alt="Pool">
+          <div class="card-body">
+            <h3 class="card-title">Pool and Spa</h3>
+            <p class="card-text">Take a swim or relax in the jacuzzi.</p>
+          </div>
+        </div>
+
+        <div class="card border-info mb-3">
+          <img class="card-img-top" src="img/amenities-imgs/courtyard-1.jpeg" alt="Courtyard">
+          <div class="card-body">
+            <h3 class="card-title">Courtyard</h3>
+            <p class="card-text">Take a walk in the beautiful courtyard.</p>
           </div>
         </div>
       </div>
     </div>
+    <h4>Other Amenities</h4>
+    <ul class="list-group border-info mb-3">
+      <li class="list-group-item">Washer/Dryer</li>
+      <li class="list-group-item">TV in all rooms</li>
+      <li class="list-group-item">Air conditioning</li>
+      <li class="list-group-item">Wifi</li>
+      <li class="list-group-item">BBQ grill</li>
+      <li class="list-group-item">Smart lock</li>
+      <li class="list-group-item">Free garage parking on premises</li>
+      <li class="list-group-item">Smoke/carbon monoxide alarm</li>
+    </ul>
   </div>
 
-  <div class="p-3 mb-2 bg-info text-white">
-    <h2>Enjoy the California sun</h2>
-    <p>OC Vacation Home is located in Garden Grove, California. Enjoy great sunset
-      views from your window and a view of
-      Disneyland fireworks from the balcony. The space includes 2 bedrooms and 2 bathrooms. The property has luxury
-      vinyl plank laminated wood flooring, complemented with soft blue wall colors and linen white ceiling and
-      baseboards. The kitchen was upgraded to include a Farmhouse single basin sink, gleaming quartz countertops and
-      stainless steel appliances. You will also be able to enjoy the community amenities of a clubhouse,
-      fully-equipped
-      fitness center, pool, spa, and barbecue areas.</p>
-  </div>
+  <h2>Floorplan</h2>
+  <h2>Map</h2>
   <footer class="site-footer">
     <div class="container">
       <div class="row">
@@ -108,7 +129,6 @@
       </div>
     </div>
   </footer>
-
   <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
