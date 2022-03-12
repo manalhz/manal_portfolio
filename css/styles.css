@@ -21,3 +21,13 @@ div p {
 .btn {
   align-items: center;
 }
+.mapouter {
+  position: relative;
+  text-align: right;
+  align-items: center;
+}
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  align-items: center;
+}
