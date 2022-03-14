@@ -60,8 +60,7 @@
       <div class="col-lg-9 col-sm-12 text-center embed-responsive embed-responsive-16by9">
         <iframe
           src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=MTAydXFuczlhbGFibnJncGw3aHFldmEyZ3NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%237986CB&color=%237986CB"
-          class="calendar embed-responsive-item" style="border:solid 1px #777" width="800" height="600" frameborder="0"
-          scrolling="no"></iframe>
+          class="calendar embed-responsive-item" width="800" height="600" frameborder="0" scrolling="no"></iframe>
       </div>
       <div class="col-lg-3 col-sm-12 mt-sm-3">
         <div class="card">
@@ -69,17 +68,103 @@
             <h2>Rates</h2>
           </div>
           <div class="card-body">
-            <h5 class="card-title">Week Days (Monday through Thursday)</h5>
+            <h5 class="card-title">Monday through Thursday</h5>
             <p class="card-text">$169 per night</p>
-            <h5 class="card-title">Weekends (Friday through Sunday)</h5>
+            <h5 class="card-title">Friday through Sunday</h5>
             <p class="card-text">$199 per night</p>
-            <h5 class="card-title">Summer and Holidays (May through August; December)</h5>
+            <h5 class="card-title">Summer and Holidays</h5>
             <p class="card-text">$219 per night</p>
-            <a href="#" class="btn btn-info">Book Now</a>
+            <div class="text-center">
+              <a id="reserveButton" href="#reserveModal" class="btn btn-info">Book Now</a>
+            </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
 
-
+  <div id="reserveModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Make a Reservation</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row form-group">
+              <label class="col-form-label col-sm-6" for="firstName">First Name</label>
+              <div class="col-sm-6">
+                <input class="form-control" type="firstName" id="firstName" name="firstName">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-form-label col-sm-6" for="lastName">Last Name</label>
+              <div class="col-sm-6">
+                <input class="form-control" type="lastName" id="lastName" name="lastName">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-form-label col-sm-6" for="numGuests">Number of Guests</label>
+              <div class="col-sm-6">
+                <select class="form-control" name="numGuests" id="numGuests">
+                  <option value="">Select...</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="4">7</option>
+                  <option value="5">8</option>
+                </select>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-form-label col-sm-6" for="arrivalDate">Date of Arrival</label>
+              <div class="col-sm-6">
+                <input class="form-control" type="date" id="arrivalDate" name="arrivalDate"
+                  placeholder="Date of Arrival">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-form-label col-sm-6" for="checkoutDate">Date of Check Out</label>
+              <div class="col-sm-6">
+                <input class="form-control" type="date" id="checkoutDate" name="checkoutDate"
+                  placeholder="Date of Check Out">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-form-label col-sm-6" for="telephone">Telephone</label>
+              <div class="col-sm-6">
+                <input class="form-control" type="tel" id="telephone" name="telephone">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-form-label col-sm-6" for="email">Email</label>
+              <div class="col-sm-6">
+                <input class="form-control" type="email" id="email" name="email">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-form-label col-sm-6" for="payment">Payment Method</label>
+              <div class="custom-control custom-radio col-sm-3">
+                <input type="radio" class="custom-control-input" id="creditCard" name="radio-stacked" required>
+                <label class="custom-control-label" for="creditCard">Credit Card</label>
+              </div>
+              <div class="custom-control custom-radio col-sm-3">
+                <input type="radio" class="custom-control-input" id="paypal" name="radio-stacked" required>
+                <label class="custom-control-label" for="paypal">PayPal</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <button type="submit" class="btn btn-info">Submit</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
@@ -114,7 +199,7 @@
   <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>
