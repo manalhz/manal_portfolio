@@ -6,12 +6,28 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite": "lite-server",
+    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
+    "clean": "rimraf dist",
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "imagemin": "imagemin img/* -o dist/img",
+    "usemin:availability": "usemin availability.html -d dist --htmlmin -o dist/availability.html",
+    "usemin:contact": "usemin contact.html -d dist --htmlmin -o dist/contact.html",
+    "usemin:gallery": "usemin gallery.html -d dist --htmlmin -o dist/gallery.html",
+    "usemin:index": "usemin index.html -d dist --htmlmin -o dist/index.html",
+    "usemin:overview": "usemin overview.html -d dist --htmlmin -o dist/overview.html",
+    "usemin:reviews": "usemin reviews.html -d dist --htmlmin -o dist/reviews.html",
+    "usemin:things-to-do": "usemin things-to-do.html -d dist --htmlmin -o dist/things-to-do.html",
+    "usemin": "npm run usemin:availability && npm run usemin:contact && npm run usemin:gallery && npm run usemin:index && npm run usemin:overview && npm run usemin:reviews && npm run usemin:things-to-do",
     "start": "npm run lite"
   },
   "author": "Manal Ziadeh",
   "license": "ISC",
   "devDependencies": {
-    "lite-server": "^2.6.1"
+    "copyfiles": "^2.2.0",
+    "imagemin-cli": "^5.1.0",
+    "lite-server": "^2.6.1",
+    "rimraf": "^3.0.2",
+    "usemin-cli": "^0.6.0"
   },
   "dependencies": {
     "bootstrap": "^4.5.2",
